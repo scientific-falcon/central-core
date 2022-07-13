@@ -1,0 +1,8 @@
+# IDEa and editors
+.idea/*
+.vscode/*
+
+# OS and Python
+*.DS_Store
+*.pyc
+.pytest_cache/*

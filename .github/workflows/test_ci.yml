@@ -1,0 +1,29 @@
+name: tests
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.7"
+    - name: Pipenv and dependecies
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: install -d
+    - name: Tests
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: run test
+
