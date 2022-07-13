@@ -23,6 +23,6 @@ jobs:
         uses: py-actions/flake8@v2
         with:
             ignore: "F401"
-            exclude: "python_template/__init__.py"
+            exclude: "core/__init__.py"
             max-line-length: "100"
-            path: "python_template"
+            path: "core"

@@ -18,7 +18,7 @@ requests = "*"
 python_version = "3.9"
 
 [scripts]
-docs = "pdoc python_template"
-debug = "uvicorn --log-level debug --reload python_template:app"
-style = "flake8 python_template"
+docs = "pdoc core"
+debug = "uvicorn --log-level debug --reload core:app"
+style = "flake8 core"
 test = "pytest"
