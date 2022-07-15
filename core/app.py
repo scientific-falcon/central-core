@@ -13,3 +13,14 @@ async def index():
     Just exists, to show possibilities of this project
     """
     return "Hello, world"
+
+
+# From here goes all user requests
+@app.get('/user/auth/{uuid}/info')
+async def get_user_info(uuid: str):
+    return "Working"
+
+
+@app.post('/user/auth')
+async def auth_user():
+    ...
